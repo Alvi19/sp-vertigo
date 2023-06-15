@@ -1,6 +1,6 @@
 <?php
 
-class Admin extends CI_Controller
+class Auth extends CI_Controller
 {
    public function index()
    {
@@ -30,7 +30,7 @@ class Admin extends CI_Controller
          $this->session->set_flashdata('message_login_error', 'Login Gagal, pastikan username dan passwrod benar!');
       }
 
-      $this->load->view('admin/login');
+      $this->load->view('auth/login');
    }
 
    public function logout()
@@ -38,11 +38,5 @@ class Admin extends CI_Controller
       $this->load->model('admin_model');
       $this->admin_model->logout();
       redirect(site_url());
-   }
-
-   public function dashboard()
-   {
-      $this->load->view('admin/parts/header.php');
-      $this->load->view('admin/parts/footer.php');
    }
 }

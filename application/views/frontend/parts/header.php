@@ -93,7 +93,7 @@
 
                <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
                <?php if (!$this->session->userdata('admin_id')) { ?>
-                  <li><a class="getstarted scrollto" href="<?php echo base_url('admin/login'); ?>">Sign in</a></li>
+                  <li><a class="getstarted scrollto" href="<?php echo base_url('auth/login'); ?>">Sign in</a></li>
                <?php } else { ?>
                   <li><a class="getstarted scrollto" href="<?php echo base_url('admin/dashboard'); ?>">Dashboard</a></li>
                <?php } ?>

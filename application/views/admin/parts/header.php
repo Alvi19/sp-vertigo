@@ -41,7 +41,7 @@
 
          <!-- Nav Item - Dashboard -->
          <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="<?php echo base_url('admin/dashboard'); ?>">
                <i class="fas fa-fw fa-tachometer-alt"></i>
                <span>Dashboard</span></a>
          </li>
@@ -50,27 +50,51 @@
          <hr class="sidebar-divider">
 
          <!-- Heading -->
-         <div class="sidebar-heading">
+         <!-- <div class="sidebar-heading">
             Interface
-         </div>
+         </div> -->
 
          <!-- Nav Item - Pages Collapse Menu -->
+
          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('admin/data_diri'); ?>">
+               <i class="fas fa-address-card"></i>
+               <span>Data Diri</span></a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('admin/kategori'); ?>">
+               <i class="fas fa-fw fa-chart-area"></i>
+               <span>Kategori</span></a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('admin/penyakit'); ?>">
+               <i class="fa-regular fa-disease"></i>
+               <span>Penyakit</span></a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('admin/gejala'); ?>">
+               <i class="fas fa-fw fa-chart-area"></i>
+               <span>Gejala</span></a>
+         </li>
+
+
+         <!-- <li class="nav-item">
+
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                <i class="fas fa-fw fa-cog"></i>
                <span>Components</span>
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                <div class="bg-white py-2 collapse-inner rounded">
-                  <h6 class="collapse-header">Custom Components:</h6>
+                  
                   <a class="collapse-item" href="buttons.html">Buttons</a>
                   <a class="collapse-item" href="cards.html">Cards</a>
                </div>
             </div>
-         </li>
+         </li> -->
 
          <!-- Nav Item - Utilities Collapse Menu -->
-         <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                <i class="fas fa-fw fa-wrench"></i>
                <span>Utilities</span>
@@ -84,18 +108,18 @@
                   <a class="collapse-item" href="utilities-other.html">Other</a>
                </div>
             </div>
-         </li>
+         </li> -->
 
          <!-- Divider -->
          <hr class="sidebar-divider">
 
          <!-- Heading -->
-         <div class="sidebar-heading">
+         <!-- <div class="sidebar-heading">
             Addons
-         </div>
+         </div> -->
 
          <!-- Nav Item - Pages Collapse Menu -->
-         <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                <i class="fas fa-fw fa-folder"></i>
                <span>Pages</span>
@@ -112,21 +136,22 @@
                   <a class="collapse-item" href="blank.html">Blank Page</a>
                </div>
             </div>
-         </li>
+         </li> -->
 
          <!-- Nav Item - Charts -->
          <li class="nav-item">
             <a class="nav-link" href="charts.html">
                <i class="fas fa-fw fa-chart-area"></i>
-               <span>Charts</span></a>
+               <span>Laporan</span></a>
          </li>
 
+
          <!-- Nav Item - Tables -->
-         <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="nav-link" href="tables.html">
                <i class="fas fa-fw fa-table"></i>
                <span>Tables</span></a>
-         </li>
+         </li> -->
 
          <!-- Divider -->
          <hr class="sidebar-divider d-none d-md-block">
@@ -137,11 +162,11 @@
          </div>
 
          <!-- Sidebar Message -->
-         <div class="sidebar-card d-none d-lg-flex">
+         <!-- <div class="sidebar-card d-none d-lg-flex">
             <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
             <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
             <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-         </div>
+         </div> -->
 
       </ul>
       <!-- End of Sidebar -->
@@ -161,7 +186,7 @@
                </button>
 
                <!-- Topbar Search -->
-               <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+               <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                   <div class="input-group">
                      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                      <div class="input-group-append">
@@ -170,7 +195,7 @@
                         </button>
                      </div>
                   </div>
-               </form>
+               </form> -->
 
                <!-- Topbar Navbar -->
                <ul class="navbar-nav ml-auto">
@@ -195,63 +220,59 @@
                      </div>
                   </li>
 
-                  <!-- Nav Item - Alerts -->
-                  <li class="nav-item dropdown no-arrow mx-1">
-                     <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-bell fa-fw"></i>
-                        <!-- Counter - Alerts -->
-                        <span class="badge badge-danger badge-counter">3+</span>
-                     </a>
-                     <!-- Dropdown - Alerts -->
-                     <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                        <h6 class="dropdown-header">
-                           Alerts Center
-                        </h6>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                           <div class="mr-3">
-                              <div class="icon-circle bg-primary">
-                                 <i class="fas fa-file-alt text-white"></i>
-                              </div>
-                           </div>
-                           <div>
-                              <div class="small text-gray-500">December 12, 2019</div>
-                              <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                           </div>
+                  <!--               
+                     <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <i class="fas fa-bell fa-fw"></i>
+                           <span class="badge badge-danger badge-counter">3+</span>
                         </a>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                           <div class="mr-3">
-                              <div class="icon-circle bg-success">
-                                 <i class="fas fa-donate text-white"></i>
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                           <h6 class="dropdown-header">
+                              Alerts Center
+                           </h6>
+                           <a class="dropdown-item d-flex align-items-center" href="#">
+                              <div class="mr-3">
+                                 <div class="icon-circle bg-primary">
+                                    <i class="fas fa-file-alt text-white"></i>
+                                 </div>
                               </div>
-                           </div>
-                           <div>
-                              <div class="small text-gray-500">December 7, 2019</div>
-                              $290.29 has been deposited into your account!
-                           </div>
-                        </a>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                           <div class="mr-3">
-                              <div class="icon-circle bg-warning">
-                                 <i class="fas fa-exclamation-triangle text-white"></i>
+                              <div>
+                                 <div class="small text-gray-500">December 12, 2019</div>
+                                 <span class="font-weight-bold">A new monthly report is ready to download!</span>
                               </div>
-                           </div>
-                           <div>
-                              <div class="small text-gray-500">December 2, 2019</div>
-                              Spending Alert: We've noticed unusually high spending for your account.
-                           </div>
-                        </a>
-                        <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                     </div>
-                  </li>
+                           </a>
+                           <a class="dropdown-item d-flex align-items-center" href="#">
+                              <div class="mr-3">
+                                 <div class="icon-circle bg-success">
+                                    <i class="fas fa-donate text-white"></i>
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="small text-gray-500">December 7, 2019</div>
+                                 $290.29 has been deposited into your account!
+                              </div>
+                           </a>
+                           <a class="dropdown-item d-flex align-items-center" href="#">
+                              <div class="mr-3">
+                                 <div class="icon-circle bg-warning">
+                                    <i class="fas fa-exclamation-triangle text-white"></i>
+                                 </div>
+                              </div>
+                              <div>
+                                 <div class="small text-gray-500">December 2, 2019</div>
+                                 Spending Alert: We've noticed unusually high spending for your account.
+                              </div>
+                           </a>
+                           <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                        </div>
+                     </li> -->
 
                   <!-- Nav Item - Messages -->
-                  <li class="nav-item dropdown no-arrow mx-1">
+                  <!-- <li class="nav-item dropdown no-arrow mx-1">
                      <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-envelope fa-fw"></i>
-                        <!-- Counter - Messages -->
                         <span class="badge badge-danger badge-counter">7</span>
                      </a>
-                     <!-- Dropdown - Messages -->
                      <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                         <h6 class="dropdown-header">
                            Message Center
@@ -302,7 +323,7 @@
                         </a>
                         <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
                      </div>
-                  </li>
+                  </li> -->
 
                   <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -310,7 +331,7 @@
                   <li class="nav-item dropdown no-arrow">
                      <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                        <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                        <img class="img-profile rounded-circle" src="<?php echo base_url('vendor/admin/'); ?>img/undraw_profile.svg">
                      </a>
                      <!-- Dropdown - User Information -->
                      <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -341,3 +362,24 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
+
+               <?php
+               $sukkses = $this->session->flashdata('sukses');
+               $fail = $this->session->flashdata('fail');
+
+               if ($sukkses) {
+               ?>
+                  <div class="alert alert-success" role="alert">
+                     <?= $sukkses ?>
+                  </div>
+               <?php
+               }
+               if ($fail) {
+               ?>
+
+                  <div class="alert alert-danger" role="alert">
+                     <?= $fail ?>
+                  </div>
+               <?php
+               }
+               ?>
