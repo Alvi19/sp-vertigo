@@ -16,26 +16,30 @@
                         <thead>
                            <tr>
                               <th width='10%'>No</th>
-                              <th width='10%'>Id Penyakit</th>
+                              <th>Kategori</th>
+                              <th>Solusi</th>
                               <th>Nama Penyakit</th>
+                              <th>Deskripsi</th>
                               <th width='17%'>Aksi</th>
                            </tr>
                         </thead>
                         <tbody>
-                           <tr>
-                              <td>1</td>
-                              <td>Penyakit</td>
-                              <td></td>
-                              <td>
-                                 <a class="btn btn-icon btn-warning btn-sm" href=""><i class="fa fa-edit"></i> Ubah</a>
-                                 <form action="" id="" method="POST" class="d-inline">
-
-                                    <input type="hidden" name="id" value="">
-                                    <button type="button" class="btn btn-icon btn-danger btn-sm btn-hapus" value=""><i class="fa fa-trash"></i>
-                                       Hapus</button>
-                                 </form>
-                              </td>
-                           </tr>
+                           <?php foreach ($data as $_data) {
+                           ?>
+                              <tr>
+                                 <td><?= $_data->id ?></td>
+                                 <td><?= $_data->kategori ?></td>
+                                 <td><?= $_data->solusi ?></td>
+                                 <td><?= $_data->nama_penyakit ?></td>
+                                 <td><?= $_data->deskripsi ?></td>
+                                 <td>
+                                    <a class="btn btn-icon btn-warning btn-sm" href="<?= base_url('admin/penyakit/edit/' . $_data->id); ?>"><i class="fa fa-edit"></i> Edit</a>
+                                    <a href="<?= base_url('admin/penyakit/delete/' . $_data->id); ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+                                 </td>
+                              </tr>
+                           <?php
+                           }
+                           ?>
                         </tbody>
                      </table>
                   </div>
