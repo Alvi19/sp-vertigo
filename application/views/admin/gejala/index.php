@@ -7,7 +7,7 @@
          <div class="card-header">
 
             <div class="card-header-action">
-               <a href="<?php echo base_url('admin/create'); ?>" class="btn btn-primary">Tambah</a>
+               <a href="<?php echo base_url('admin/gejala/create'); ?>" class="btn btn-primary">Tambah</a>
             </div>
             <div class="card-body">
                <div class="row">
@@ -16,26 +16,28 @@
                         <thead>
                            <tr>
                               <th width='10%'>No</th>
-                              <th width='10%'>Id Gejala</th>
-                              <th>Nama Gejala</th>
+                              <th width='10%'>Nama Gejala</th>
+                              <th>Bobot</th>
                               <th width='17%'>Aksi</th>
                            </tr>
                         </thead>
                         <tbody>
-                           <tr>
-                              <td>1</td>
-                              <td>Penyakiut</td>
-                              <td></td>
-                              <td>
-                                 <a class="btn btn-icon btn-warning btn-sm" href=""><i class="fa fa-edit"></i> Ubah</a>
-                                 <form action="" id="" method="POST" class="d-inline">
+                           <?php foreach ($data as $_data) {
+                           ?>
+                              <tr>
+                                 <td><?= $_data->id ?></td>
+                                 <td><?= $_data->nama_gejala ?></td>
+                                 <td><?= $_data->bobot ?></td>
+                                 <td>
+                                    <a class="btn btn-icon btn-warning btn-sm" href="<?= base_url('admin/gejala/edit/' . $_data->id); ?>"><i class="fa fa-edit"></i> Edit</a>
+                                    <a href="<?= base_url('admin/gejala/delete/' . $_data->id); ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+                                 </td>
+                              </tr>
 
-                                    <input type="hidden" name="id" value="">
-                                    <button type="button" class="btn btn-icon btn-danger btn-sm btn-hapus" value=""><i class="fa fa-trash"></i>
-                                       Hapus</button>
-                                 </form>
-                              </td>
-                           </tr>
+
+                           <?php
+                           }
+                           ?>
                         </tbody>
                      </table>
                   </div>
