@@ -5,6 +5,8 @@ class penyakit extends CI_Controller
 {
    public function index()
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       // $data = $this->db->get('penyakit')->result();
       $this->db->select('penyakit.*, nama_kategori');
       $this->db->from('penyakit');
@@ -18,6 +20,8 @@ class penyakit extends CI_Controller
 
    public function create()
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $this->load->model('penyakit_model');
       $this->load->model('kategori_model');
       $this->load->model('penyakit_gejala_model');
@@ -55,6 +59,8 @@ class penyakit extends CI_Controller
 
    public function edit($id)
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $this->load->model('penyakit_model');
       $this->load->model('kategori_model');
       $this->load->model('penyakit_gejala_model');
@@ -99,6 +105,8 @@ class penyakit extends CI_Controller
 
    public function delete($id)
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $this->load->model('penyakit_model');
       $penyakit = $this->penyakit_model->get($id);
 

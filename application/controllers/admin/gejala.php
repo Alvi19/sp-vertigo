@@ -5,6 +5,8 @@ class gejala extends CI_Controller
 {
    public function index()
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $data = $this->db->get('gejala')->result();
 
       $this->load->view('admin/parts/header.php');
@@ -14,6 +16,8 @@ class gejala extends CI_Controller
 
    public function create()
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $this->load->model('gejala_model');
       $this->load->library('form_validation');
 
@@ -37,6 +41,8 @@ class gejala extends CI_Controller
 
    public function edit($id)
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $this->load->model('gejala_model');
       $this->load->library('form_validation');
 
@@ -65,6 +71,8 @@ class gejala extends CI_Controller
 
    public function delete($id)
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $this->load->model('gejala_model');
       $gejala = $this->gejala_model->get($id);
 

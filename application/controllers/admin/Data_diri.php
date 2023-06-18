@@ -5,6 +5,7 @@ class Data_diri extends CI_Controller
 {
    public function index()
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
 
       $this->load->view('admin/parts/header.php');
       $this->load->view('admin/data_diri.php');

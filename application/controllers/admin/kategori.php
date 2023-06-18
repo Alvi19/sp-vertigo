@@ -5,6 +5,8 @@ class kategori extends CI_Controller
 {
    public function index()
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $data = $this->db->get('kategori')->result();
 
       $this->load->view('admin/parts/header.php');
@@ -14,6 +16,8 @@ class kategori extends CI_Controller
 
    public function create()
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $this->load->model('kategori_model');
       $this->load->library('form_validation');
 
@@ -38,6 +42,8 @@ class kategori extends CI_Controller
 
    public function edit($id)
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $this->load->model('kategori_model');
       $this->load->library('form_validation');
 
@@ -67,6 +73,8 @@ class kategori extends CI_Controller
 
    public function delete($id)
    {
+      if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $this->load->model('kategori_model');
       $kategori = $this->kategori_model->get($id);
 
