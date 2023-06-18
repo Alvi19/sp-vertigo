@@ -36,24 +36,24 @@
          </li>
          <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url('admin/kategori'); ?>">
-               <i class="fas fa-fw fa-chart-area"></i>
+               <i class="fa fa-address-book"></i>
                <span>Kategori</span></a>
          </li>
          <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url('admin/penyakit'); ?>">
-               <i class="fa-regular fa-disease"></i>
+               <i class="fas fa-medkit"></i>
                <span>Penyakit</span></a>
          </li>
          <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url('admin/gejala'); ?>">
-               <i class="fas fa-fw fa-chart-area"></i>
+               <i class="fas fa-plus-square"></i>
                <span>Gejala</span></a>
          </li>
          <hr class="sidebar-divider">
          <li class="nav-item">
-            <a class="nav-link" href="charts.html">
-               <i class="fas fa-fw fa-chart-area"></i>
-               <span>Laporan</span></a>
+            <a class="nav-link" href="<?php echo base_url('admin/diagnosa'); ?>">
+               <i class="fas fa-users"></i>
+               <span>Diagnosa</span></a>
          </li>
          <hr class="sidebar-divider d-none d-md-block">
          <div class="text-center d-none d-md-inline">

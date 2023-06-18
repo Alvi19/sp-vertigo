@@ -28,7 +28,7 @@
                            ?>
                               <tr>
                                  <td><?= $_data->id ?></td>
-                                 <td><?= $_data->kategori ?></td>
+                                 <td><?= $_data->nama_kategori ?></td>
                                  <td><?= $_data->solusi ?></td>
                                  <td><?= $_data->nama_penyakit ?></td>
                                  <td><?= $_data->deskripsi ?></td>

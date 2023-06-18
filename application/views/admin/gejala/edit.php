@@ -11,7 +11,7 @@
             </div>
             <div class="form-group">
                <label for="nama">Bobot</label>
-               <input type="number" class="form-control" id="bobot" name="bobot" placeholder="Masukkan Bobot" value="0">
+               <input type="number" step="0.1" class="form-control" id="bobot" name="bobot" placeholder="Masukkan Bobot" value="<?= $bobot ?>">
             </div>
          </div>
          <div class="card-footer text-right">

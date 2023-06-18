@@ -16,16 +16,16 @@
                         <thead>
                            <tr>
                               <th width='10%'>No</th>
-                              <th width='10%'>Nama Gejala</th>
+                              <th>Nama Gejala</th>
                               <th>Bobot</th>
                               <th width='17%'>Aksi</th>
                            </tr>
                         </thead>
                         <tbody>
-                           <?php foreach ($data as $_data) {
+                           <?php foreach ($data as $index => $_data) {
                            ?>
                               <tr>
-                                 <td><?= $_data->id ?></td>
+                                 <td><?= $index + 1 ?></td>
                                  <td><?= $_data->nama_gejala ?></td>
                                  <td><?= $_data->bobot ?></td>
                                  <td>

@@ -41,18 +41,20 @@ class Penyakit_model extends CI_Model
    public function create($kategori, $solusi, $nama_penyakit, $deskripsi)
    {
       $data = [
-         'kategori' => $kategori,
+         'id_kategori' => $kategori,
          'solusi' => $solusi,
          'deskripsi' => $deskripsi,
          'nama_penyakit' => $nama_penyakit
       ];
       $this->db->insert($this->_table, $data);
+
+      return $this->db->insert_id();
    }
 
-   public function edit($kategori, $solusi, $nama_penyakit, $deskripsi)
+   public function edit($id, $kategori, $solusi, $nama_penyakit, $deskripsi)
    {
       $data = [
-         'kategori' => $kategori,
+         'id_kategori' => $kategori,
          'solusi' => $solusi,
          'deskripsi' => $deskripsi,
          'nama_penyakit' => $nama_penyakit

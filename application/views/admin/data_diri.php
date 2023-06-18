@@ -1,4 +1,4 @@
-<h6 style="text-align: center;">MANAJEMEN DATA DIRI</h6>
+<h1 class="text-center text-bold">MANAJEMEN DATA DIRI</h1>
 <br>
 <div>
    <form>
