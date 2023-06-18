@@ -1,18 +1,4 @@
 <footer id="footer" class="footer">
-   <div class="footer-newsletter">
-      <div class="container">
-         <div class="row justify-content-center">
-         </div>
-      </div>
-   </div>
-   <div class="footer-top">
-      <div class="container">
-         <div class="row gy-4">
-            <div class="col-lg-5 col-md-12 footer-info">
-            </div>
-         </div>
-      </div>
-   </div>
    <div class="container">
       <div class="copyright">
          &copy; Copyright <strong><span>Sistem Pakar Vertigo</span></strong>. All Rights Reserved

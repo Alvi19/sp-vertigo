@@ -2,9 +2,9 @@
    <div class="container">
       <div class="row">
          <div class="container">
+            <h3 class="text-center fw-bold text-primary mb-3">SISTEM PAKAR DIAGNOSA PENYAKIT VERTIGO</h3>
             <form action="" method="post">
-               <div class="row mb-3">
-                  <h3 class="text-center">SISTEM PAKAR DIAGNOSA PENYAKIT VERTIGO</h3>
+               <div class="row">
                   <div class="col">
                      <div class="card">
                         <div class="card-body">
@@ -53,7 +53,7 @@
                      </div>
                   </div>
                </div>
-               <div class="text-center">
+               <div class="text-center mb-3">
                   <a href="<?php echo base_url('home'); ?>" class="btn btn-danger btn-md">Kembali</a>
                   <button type="submit" class="btn btn-primary btn-md" id="mulai">Mulai</button>
                </div>
