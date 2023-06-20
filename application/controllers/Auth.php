@@ -14,6 +14,7 @@ class Auth extends CI_Controller
       $this->load->model('admin_model');
       $this->load->library('form_validation');
 
+
       $rules = $this->admin_model->rules();
       $this->form_validation->set_rules($rules);
 
