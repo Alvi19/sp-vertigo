@@ -28,6 +28,13 @@ class Pasien_model extends CI_Model
       ];
    }
 
+   public function all()
+   {
+      $query = $this->db->query('SELECT p.nama, p.alamat, p.JK, p.tanggal, dh.presentase, dp.nama_penyakit FROM pasien p JOIN detail_hasil dh ON p.id = dh.id_pasien JOIN penyakit dp ON dh.id_penyakit = dp.id WHERE dh.presentase = ( SELECT MAX(presentase) FROM detail_hasil WHERE id_pasien = p.id );');
+      return $query->result();
+   }
+
+
    public function get($id)
    {
       $this->db->where('id', $id);

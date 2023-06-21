@@ -57,13 +57,6 @@ class Diagnosa extends CI_Controller
       $this->load->view('admin/gejala/create.php', compact('gejala'));
       $this->load->view('admin/parts/footer.php');
    }
-
-   // public function hasil()
-   // {
-   //    $this->load->view('frontend/parts/header.php');
-   //    $this->load->view('frontend/hasil.php');
-   //    $this->load->view('frontend/parts/footer.php');
-   // }
 }
 
 /* End of file Data_diri.php */

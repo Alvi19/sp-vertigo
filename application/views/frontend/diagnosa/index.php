@@ -38,7 +38,7 @@
                                  <div class="col">
                                     <div class="card">
                                        <div class="card-body">
-                                          <h3>Kriteria Penyakit</h3>
+                                          <h3>Jenis-Jenis Penyakit Vertigo</h3>
                                           <hr>
                                           <?php foreach ($data as $_penyakit) { ?>
                                              <div><?= $_penyakit->nama_penyakit ?>

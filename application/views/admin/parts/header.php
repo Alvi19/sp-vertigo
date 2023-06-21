@@ -56,6 +56,11 @@
                <i class="fas fa-users"></i>
                <span>Diagnosa</span></a>
          </li>
+         <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('admin/akun') ?>">
+               <i class="fas fa-user"></i>
+               <span>Akun</span></a>
+         </li>
          <hr class="sidebar-divider d-none d-md-block">
          <div class="text-center d-none d-md-inline">
             <button class="rounded-circle border-0" id="sidebarToggle"></button>

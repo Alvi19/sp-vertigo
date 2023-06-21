@@ -20,15 +20,20 @@
                      </tr>
                   </thead>
                   <tbody>
-                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                     </tr>
+                     <?php foreach ($data as $index => $_data) {
+                     ?>
+                        <tr>
+                           <td><?= $index + 1 ?></td>
+                           <td><?= $_data->tanggal ?></td>
+                           <td><?= $_data->nama ?></td>
+                           <td><?= $_data->alamat ?></td>
+                           <td><?= $_data->JK ?></td>
+                           <td><?= $_data->presentase ?></td>
+                           <td><?= $_data->nama_penyakit ?></td>
+                        </tr>
+                     <?php
+                     }
+                     ?>
                   </tbody>
                </table>
             </div>
