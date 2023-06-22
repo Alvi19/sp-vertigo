@@ -7,6 +7,7 @@ class dashboard extends CI_Controller
    public function index()
    {
       if (!$this->session->userdata('admin_id')) redirect('auth/login');
+
       $this->load->model('admin_model');
       $this->load->model('penyakit_model');
       $this->load->model('gejala_model');
