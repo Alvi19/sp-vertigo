@@ -1,9 +1,9 @@
 <section id="hero" class="hero d-flex align-items-center">
    <div class="container">
+      <header class="section-header">
+         <p>Informasi Penyakit</p>
+      </header>
       <div class="row">
-         <div class="section-header">
-            <h1>Informasi Penyakit</h1>
-         </div>
          <div class="container">
             <div class="table-responsive">
                <table class="table table-striped table-bordered" id="tabel">
