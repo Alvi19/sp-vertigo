@@ -9,7 +9,6 @@
                      <div class='alert alert-primary alert-dismissible'>
                         <h4><i class="bi bi-exclamation-triangle"></i>&nbsp;Perhatian !</h4>
                         <p>Silahkan pilih gejala sesuai dengan kondisi anda</p>
-                        <!-- <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button> -->
                      </div>
                      <form action="" method="post">
                         <input type="hidden" name="_token" value="PCSQgxZ2CAOpEsKg1jSfxBZ13I3fEozgTvgH0dWu">
@@ -22,7 +21,6 @@
                               </tr>
                            </thead>
                            <tbody>
-
                               <tr>
                                  <th scope="row" width="10%">1</th>
                                  <td>Batuk</td>
@@ -50,7 +48,6 @@
                                     </div>
                                  </td>
                               </tr>
-
                               <tr>
                                  <th scope="row" width="10%">3</th>
                                  <td>Mencret</td>

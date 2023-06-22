@@ -12,6 +12,11 @@ class Info_penyakit extends CI_Controller
 
    public function index()
    {
+      $this->db->select('penyakit.*, nama_kategori');
+      $this->db->from('penyakit');
+      $this->db->join('kategori', 'kategori.id = penyakit.id_kategori');
+      $data = $this->db->get()->result();
+      $this->loadView('info_penyakit.php', compact('data'));
    }
 }
 

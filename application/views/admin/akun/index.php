@@ -2,7 +2,7 @@
        <div class="section-body">
           <div class="card card-primary">
              <div class="card-header">
-                <h4>Daftar</h4>
+                <h4>Daftar Akun </h4>
                 <div class="card-header-action">
                    <a href="<?php echo base_url('admin/akun/create'); ?>" class="btn btn-primary"><i class="fa fa-plus"></i>
                       Tambah

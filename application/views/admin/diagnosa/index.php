@@ -2,7 +2,6 @@
    <div class="card card-primary">
       <div class="card-header d-flex justify-content-between">
          <h4>Daftar Diagnosa</h4>
-         <a href="<?= base_url('admin/diagnosa/laporan') ?>" class="btn btn-info btn-sm"><i class="fas fa-file" style="color:white"></i> Print</a>
       </div>
       <div class="card-body">
          <div class="row">

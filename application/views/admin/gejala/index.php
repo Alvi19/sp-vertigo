@@ -5,7 +5,6 @@
    <div class="section-body">
       <div class="card card-primary">
          <div class="card-header">
-
             <div class="card-header-action">
                <a href="<?php echo base_url('admin/gejala/create'); ?>" class="btn btn-primary"><i class="fa fa-plus" style=""></i> Tambah Gejala</a>
             </div>
@@ -17,7 +16,7 @@
                            <tr>
                               <th width='10%'>No</th>
                               <th>Nama Gejala</th>
-                              <th>Bobot</th>
+                              <th width='20%'>Bobot</th>
                               <th width='17%'>Aksi</th>
                            </tr>
                         </thead>
@@ -33,8 +32,6 @@
                                     <a href="<?= base_url('admin/gejala/delete/' . $_data->id); ?>" onclick="return deleteConfirmation();" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
                                  </td>
                               </tr>
-
-
                            <?php
                            }
                            ?>
