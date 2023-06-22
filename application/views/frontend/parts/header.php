@@ -30,7 +30,7 @@
             <ul>
                <li><a class="nav-link scrollto active" href="<?php echo base_url('home'); ?>">Home</a></li>
                <li><a class="nav-link scrollto" href="<?php echo base_url('diagnosa'); ?>">Diagnosa</a></li>
-               <li><a class="nav-link scrollto" href="">Penyakit</a></li>
+               <li><a class="nav-link scrollto" href="<?php echo base_url('home'); ?>">Info Penyakit</a></li>
                <li><a class="nav-link scrollto" href="<?php echo base_url('about'); ?>">About</a></li>
                <?php if (!$this->session->userdata('admin_id')) { ?>
                   <li><a class="getstarted scrollto" href="<?php echo base_url('auth/login'); ?>">Sign in</a></li>

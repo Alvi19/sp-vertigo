@@ -22,23 +22,56 @@ class Admin_model extends CI_Model
       ];
    }
 
+   public function rules_create()
+   {
+      return [
+         [
+            'field' => 'nama',
+            'label' => 'Nama',
+            'rules' => 'required'
+         ],
+         [
+            'field' => 'username',
+            'label' => 'Username',
+            'rules' => 'required'
+         ],
+         [
+            'field' => 'password',
+            'label' => 'Password',
+            'rules' => 'required|max_length[255]'
+         ]
+      ];
+   }
+
+   public function rules_edit()
+   {
+      return [
+         [
+            'field' => 'nama',
+            'label' => 'Nama',
+            'rules' => 'required'
+         ],
+         [
+            'field' => 'username',
+            'label' => 'Username',
+            'rules' => 'required'
+         ]
+      ];
+   }
    public function login($username, $password)
    {
       $this->db->where('username', $username);
       $query = $this->db->get($this->_table);
       $user = $query->row();
 
-      // cek apakah user sudah terdaftar?
       if (!$user) {
          return FALSE;
       }
 
-      // cek apakah passwordnya benar?
       if (!password_verify($password, $user->password)) {
          return FALSE;
       }
 
-      // bikin session
       $this->session->set_userdata([self::SESSION_KEY => $user->id]);
       $this->_update_last_login($user->id);
 
@@ -69,5 +102,43 @@ class Admin_model extends CI_Model
       ];
 
       return $this->db->update($this->_table, $data, ['id' => $id]);
+   }
+
+   public function get($id)
+   {
+      $this->db->where('id', $id);
+      $query = $this->db->get($this->_table);
+      return $query->row();
+   }
+
+   public function create($nama, $username, $password)
+   {
+      $data = [
+         'nama' => $nama,
+         'username' => $username,
+         'password' => password_hash($password, PASSWORD_DEFAULT),
+      ];
+      $this->db->insert($this->_table, $data);
+   }
+
+   public function edit($id, $nama, $username, $password)
+   {
+      $data = [
+         'nama' => $nama,
+         'username' => $username,
+
+      ];
+
+      if ($password) $data['password'] =  password_hash($password, PASSWORD_DEFAULT);
+
+      $this->db->set($data);
+      $this->db->where('id', $id);
+      $this->db->update($this->_table);
+   }
+
+   public function delete($id)
+   {
+      $this->db->where('id', $id);
+      $this->db->delete($this->_table);
    }
 }

@@ -71,22 +71,8 @@ class Pasien_model extends CI_Model
       return $query->row();
    }
 
-   // public function edit($id, $kode_kategori, $nama_kategori, $deskripsi)
-   // {
-   //    $data = [
-   //       'kode_kategori' => $kode_kategori,
-   //       'nama_kategori' => $nama_kategori,
-   //       'deskripsi' => $deskripsi
-   //    ];
-   //    $this->db->set($data);
-   //    $this->db->where('id', $id);
-   //    $this->db->update($this->_table);
-   // }
-
-   // public function delete($id)
-   // {
-
-   //    $this->db->where('id', $id);
-   //    $this->db->delete($this->_table);
-   // }
+   public function total()
+   {
+      return $this->db->count_all($this->_table);
+   }
 }

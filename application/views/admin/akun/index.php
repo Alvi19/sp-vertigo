@@ -18,8 +18,6 @@
                                <th width="10%">No</th>
                                <th>Nama</th>
                                <th>Username</th>
-                               <th width="25%">Email</th>
-                               <th width="25%">Password</th>
                                <th width="17%">Aksi</th>
                             </tr>
                          </thead>
@@ -30,11 +28,9 @@
                                   <td><?= $index + 1 ?></td>
                                   <td><?= $_data->nama ?></td>
                                   <td><?= $_data->username ?></td>
-                                  <td><?= $_data->email ?></td>
-                                  <td><?= $_data->password ?></td>
                                   <td>
                                      <a class="btn btn-icon btn-warning btn-sm" href="<?= base_url('admin/akun/edit/' . $_data->id); ?>"><i class="fa fa-edit"></i> Edit</a>
-                                     <a href="<?= base_url('admin/akun/delete/' . $_data->id); ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
+                                     <a href="<?= base_url('admin/akun/delete/' . $_data->id); ?>" onclick="return deleteConfirmation();" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</a>
                                   </td>
                                </tr>
                             <?php

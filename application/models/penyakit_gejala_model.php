@@ -47,4 +47,8 @@ class Penyakit_gejala_model extends CI_Model
       $this->db->where('id_penyakit', $id);
       $this->db->delete($this->_table);
    }
+   public function total()
+   {
+      return $this->db->count_all($this->_table);
+   }
 }

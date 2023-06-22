@@ -13,7 +13,8 @@ class penyakit extends CI_Controller
       $this->db->join('kategori', 'kategori.id = penyakit.id_kategori');
       $data = $this->db->get()->result();
 
-      $this->load->view('admin/parts/header.php');
+      $this->load->model('admin_model');
+      $this->load->view('admin/parts/header.php', ['title' => 'Penyakit', 'user' => $this->admin_model->current_user()]);
       $this->load->view('admin/penyakit/index.php', compact('data'));
       $this->load->view('admin/parts/footer.php');
    }
@@ -52,7 +53,8 @@ class penyakit extends CI_Controller
          redirect('admin/penyakit');
       }
 
-      $this->load->view('admin/parts/header.php');
+      $this->load->model('admin_model');
+      $this->load->view('admin/parts/header.php', ['title' => 'Penyakit', 'user' => $this->admin_model->current_user()]);
       $this->load->view('admin/penyakit/create.php', compact('data_gejala', 'data_kategori', 'kategori', 'solusi', 'nama_penyakit', 'deskripsi'));
       $this->load->view('admin/parts/footer.php');
    }
@@ -98,7 +100,8 @@ class penyakit extends CI_Controller
          redirect('admin/penyakit');
       }
 
-      $this->load->view('admin/parts/header.php');
+      $this->load->model('admin_model');
+      $this->load->view('admin/parts/header.php', ['title' => 'Penyakit', 'user' => $this->admin_model->current_user()]);
       $this->load->view('admin/penyakit/edit.php', compact('data_gejala_check', 'data_gejala', 'data_kategori', 'kategori', 'solusi', 'nama_penyakit', 'deskripsi'));
       $this->load->view('admin/parts/footer.php');
    }

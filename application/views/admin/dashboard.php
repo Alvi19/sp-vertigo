@@ -9,8 +9,7 @@
                <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                      Total Gejala</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">
-                     <!-- <h2>Jumlah Data: <?php echo $gejala ?></h2> -->
+                  <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $gejala ?>
                   </div>
                </div>
                <div class="col-auto">
@@ -26,7 +25,7 @@
                <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                      Penyakit</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $penyakit ?> </div>
                </div>
                <div class="col-auto">
                </div>
@@ -41,7 +40,7 @@
                <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                      Diagnosa</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $diagnosa ?></div>
                </div>
                <div class="col-auto">
                </div>

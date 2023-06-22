@@ -12,7 +12,6 @@ class Home extends CI_Controller
 
    public function index()
    {
-      // $data['penyakit'] = $this->db->get('penyakit');
 
       $this->loadView('home.php');
    }

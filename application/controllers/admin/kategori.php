@@ -9,7 +9,8 @@ class kategori extends CI_Controller
 
       $data = $this->db->get('kategori')->result();
 
-      $this->load->view('admin/parts/header.php');
+      $this->load->model('admin_model');
+      $this->load->view('admin/parts/header.php', ['title' => 'Kategori', 'user' => $this->admin_model->current_user()]);
       $this->load->view('admin/kategori/index.php', compact('data'));
       $this->load->view('admin/parts/footer.php');
    }
@@ -35,7 +36,8 @@ class kategori extends CI_Controller
          redirect('admin/kategori');
       }
 
-      $this->load->view('admin/parts/header.php');
+      $this->load->model('admin_model');
+      $this->load->view('admin/parts/header.php', ['title' => 'Kategori', 'user' => $this->admin_model->current_user()]);
       $this->load->view('admin/kategori/create.php', compact('kode_kategori', 'nama_kategori', 'deskripsi'));
       $this->load->view('admin/parts/footer.php');
    }
@@ -66,7 +68,8 @@ class kategori extends CI_Controller
          redirect('admin/kategori');
       }
 
-      $this->load->view('admin/parts/header.php');
+      $this->load->model('admin_model');
+      $this->load->view('admin/parts/header.php', ['title' => 'Kategori', 'user' => $this->admin_model->current_user()]);
       $this->load->view('admin/kategori/edit.php', compact('kode_kategori', 'nama_kategori', 'deskripsi'));
       $this->load->view('admin/parts/footer.php');
    }

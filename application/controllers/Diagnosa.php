@@ -27,11 +27,11 @@ class Diagnosa extends CI_Controller
          redirect('penyakit');
       }
 
-
       $this->load->view('frontend/parts/header.php');
       $this->load->view('frontend/diagnosa/index.php', compact('data', 'nama', 'alamat', 'jk'));
       $this->load->view('frontend/parts/footer.php');
    }
+
 
    public function create()
    {

@@ -9,7 +9,8 @@ class gejala extends CI_Controller
 
       $data = $this->db->get('gejala')->result();
 
-      $this->load->view('admin/parts/header.php');
+      $this->load->model('admin_model');
+      $this->load->view('admin/parts/header.php', ['title' => 'Gejala', 'user' => $this->admin_model->current_user()]);
       $this->load->view('admin/gejala/index.php', compact('data'));
       $this->load->view('admin/parts/footer.php');
    }
@@ -34,7 +35,8 @@ class gejala extends CI_Controller
          redirect('admin/gejala');
       }
 
-      $this->load->view('admin/parts/header.php');
+      $this->load->model('admin_model');
+      $this->load->view('admin/parts/header.php', ['title' => 'Gejala', 'user' => $this->admin_model->current_user()]);
       $this->load->view('admin/gejala/create.php', compact('nama_gejala', 'bobot'));
       $this->load->view('admin/parts/footer.php');
    }
@@ -64,7 +66,8 @@ class gejala extends CI_Controller
          redirect('admin/gejala');
       }
 
-      $this->load->view('admin/parts/header.php');
+      $this->load->model('admin_model');
+      $this->load->view('admin/parts/header.php', ['title' => 'Gejala', 'user' => $this->admin_model->current_user()]);
       $this->load->view('admin/gejala/edit.php', compact('nama_gejala', 'bobot'));
       $this->load->view('admin/parts/footer.php');
    }
