@@ -1,48 +1,48 @@
 <h1 class="text-center text-bold">MANAJEMEN DATA DIRI</h1>
 <br>
 <div>
-   <form>
+   <form action="" method="post">
       <div class="row">
          <div class="col">
             <div class="form-group">
-               <label for="exampleInputEmail1">Nama</label>
-               <input type="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter nama">
+               <label for="nama">Nama</label>
+               <input required name="nama" class="form-control" id="nama" aria-describedby="emailHelp" placeholder="Enter nama" value="<?= $user->nama ?>">
             </div>
             <div class="form-group">
-               <label for="exampleInputEmail1">Username</label>
-               <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+               <label for="username">Username</label>
+               <input required name="username" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter username" value="<?= $user->username ?>">
             </div>
             <div class="form-group">
-               <label for="exampleInputPassword1">Password</label>
-               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+               <label for="exampleInputPassword">Password</label>
+               <input name="password" type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
             </div>
             <div class="form-group">
                <label for="exampleInputPassword1">Konfirmasi Password</label>
-               <input type="konfirmasi password" class="form-control" id="exampleInputPassword1" placeholder="Konfirmasi Password">
+               <input name="konfirmasi password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Konfirmasi Password">
             </div>
-
          </div>
          <div class="col">
             <div class="form-group">
-               <label for="exampleInputEmail1">Email</label>
-               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+               <label for="email">Email</label>
+               <input required name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="<?= $user->email ?>">
             </div>
             <div class="form-group">
-               <label for="exampleInputEmail1">Handphone</label>
-               <input type="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter handphone">
+               <label for="no_hp">Handphone</label>
+               <input required name="no_hp" class="form-control" id="no_hp" aria-describedby="emailHelp" placeholder="Enter handphone" value="<?= $user->no_hp ?>">
             </div>
             <div class="form-group">
-               <label for="exampleInputPassword1">Alamat</label>
-               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="alamat">
+               <label for="alamat">Alamat</label>
+               <input required name="alamat" class="form-control" id="alamat" placeholder="alamat" value="<?= $user->alamat ?>">
             </div>
             <div class="form-group">
-               <label for="exampleInputPassword1">Jenis Kelamin</label>
-               <input type="konfirmasi password" class="form-control" id="exampleInputPassword1" placeholder="Jenis Kelamin">
+               <label for="JK">Jenis Kelamin</label>
+               <select required name="jk" id="jk" class="form-control">
+                  <option value="laki-laki">Laki-Laki</option>
+                  <option value="perempuan">Perempuan</option>
+               </select>
             </div>
-
          </div>
       </div>
-
       <button type="submit" class="btn btn-primary">Update</button>
    </form>
 </div>

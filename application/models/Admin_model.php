@@ -58,6 +58,43 @@ class Admin_model extends CI_Model
          ]
       ];
    }
+
+   public function rules_data_diri()
+   {
+      return [
+         [
+            'field' => 'nama',
+            'label' => 'Nama',
+            'rules' => 'required'
+         ],
+         [
+            'field' => 'username',
+            'label' => 'Username',
+            'rules' => 'required'
+         ],
+         [
+            'field' => 'email',
+            'label' => 'email',
+            'rules' => 'required'
+         ],
+         [
+            'field' => 'no_hp',
+            'label' => 'No Hp',
+            'rules' => 'required'
+         ],
+         [
+            'field' => 'alamat',
+            'label' => 'Alamat',
+            'rules' => 'required'
+         ],
+         [
+            'field' => 'jk',
+            'label' => 'Jenis kelamin',
+            'rules' => 'required'
+         ]
+      ];
+   }
+
    public function login($username, $password)
    {
       $this->db->where('username', $username);
@@ -140,5 +177,16 @@ class Admin_model extends CI_Model
    {
       $this->db->where('id', $id);
       $this->db->delete($this->_table);
+   }
+
+   public function update_data_diri($id, $nama, $username, $email, $no_hp, $alamat, $jk, $password = null)
+   {
+      $data = compact('nama', 'username', 'email', 'no_hp', 'alamat', 'jk');
+
+      if ($password) $data['password'] =  password_hash($password, PASSWORD_DEFAULT);
+
+      $this->db->set($data);
+      $this->db->where('id', $id);
+      $this->db->update($this->_table);
    }
 }
